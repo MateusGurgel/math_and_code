@@ -142,3 +142,7 @@ tendo um alto risco de overfitting e de ser influenciado por outliers,
 já que o MSE move a linha para perto dos valores discrepantes.
 
 ---
+
+Em geral, métodos que são elevados a alguma potencia tendem a ser muito
+afetados por outliers, já que os outliers são extremamente punidos, assim, 
+gerando uma curva que tende a se aproximar muito desses números fora da curva.
