@@ -71,6 +71,15 @@ for real_value, predicted_value in zip(valores_reais, valores_previstos):
 
 print(loss)
 ```
+
+Em geral, o L1 tende a **zerar** pesos de variáveis menos importantes para o cálculo,
+supondo que o conjunto de dados tem muitas features (ou seja, colunas ou campos do dataset), 
+o L1 também conhecido como lasso vai eliminar o peso das variáveis que menos afetam o resultado final.
+
+Idealmente, o L1 deve ser usado quando temos muitas features de alta e baixa qualidade misturadas.
+Entretanto, o Lasso tende a performar mal em casos de overfitting comparado com o L2
+
+
 ---
 
 ### Squared Loss (L2)
@@ -80,6 +89,9 @@ O L2 é bem parecido com o L1, com a diferença que o loss é elevado ao quadrad
 $$
 \sum_{i=1}^{n} = (valor real - valor previsto)^2
 $$
+
+O L2 ou Ridge tende a dividir bem os pesos entre as variáveis, seu uso é recomendado
+em casos de risco de overfitting
 
 ---
 
@@ -109,14 +121,24 @@ loss = loss / len(valores_reais)
 
 ```
 
-### Erro quadrático medio (EQM):
+O MAE é usado para penalizar todos os erros igualmente, ele performa muito bem
+em conjuntos com muitos outliers, ou seja, conjuntos que existem muitos pontos fora da curva
 
-Assim como L1 está para L2, MAE está para EQM.
+O MSE move o modelo mais para os valores discrepantes
+
+### Erro quadrático medio (MSE):
+
+Assim como L1 está para L2, MAE está para MSE.
 
 $$
 \frac{1}{n} \sum_{i=1}^{n} (valor real - valor previsto)^2
 $$
 
 Então basta elevar ao quadrado antes de fazer a média.
+
+O MSE é usado para penalizar fortemente os erros como um todo,
+ele é usado para tentar alcançar eficiencia máxima no conjunto,
+tendo um alto risco de overfitting e de ser influenciado por outliers,
+já que o MSE move a linha para perto dos valores discrepantes.
 
 ---
