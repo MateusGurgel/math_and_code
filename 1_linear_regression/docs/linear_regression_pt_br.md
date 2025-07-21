@@ -87,7 +87,7 @@ Entretanto, o Lasso tende a performar mal em casos de overfitting comparado com 
 O L2 é bem parecido com o L1, com a diferença que o loss é elevado ao quadrado.
 
 $$
-\sum_{i=1}^{n} = (valor real - valor previsto)^2
+\sum_{i=1}^{n} (valor real - valor previsto)^2
 $$
 
 O L2 ou Ridge tende a dividir bem os pesos entre as variáveis, seu uso é recomendado
