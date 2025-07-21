@@ -48,5 +48,5 @@ lr.fit(
 
 result = lr.predict(np.array([8, 8, 8]))
 
-# Deveria se 13
-print("Resultado: ", result)
+# Expected to be around 8
+print("Result: ", result)
