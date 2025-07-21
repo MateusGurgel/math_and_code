@@ -146,3 +146,8 @@ já que o MSE move a linha para perto dos valores discrepantes.
 Em geral, métodos que são elevados a alguma potencia tendem a ser muito
 afetados por outliers, já que os outliers são extremamente punidos, assim, 
 gerando uma curva que tende a se aproximar muito desses números fora da curva.
+
+
+## Referência
+
+- [🎥 Finding Derivative of L1, L2, ReLU... (YouTube)](https://www.youtube.com/watch?v=vF2Q69V0ThA)
